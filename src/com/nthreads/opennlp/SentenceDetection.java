@@ -2,19 +2,18 @@ package com.nthreads.opennlp;
 
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.sentdetect.SentenceModel;
-import opennlp.tools.util.Span;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static com.nthreads.opennlp.Print.print;
+import static com.nthreads.opennlp.Logger.log;
 
 public class SentenceDetection {
     public static void main(String[] args) {
         String paragraph = "Hello, How are you? Welcome to nthreads.com";
 
-        print(usingOpenNLP(paragraph));
+        Logger.log(usingOpenNLP(paragraph));
 
     }
 
