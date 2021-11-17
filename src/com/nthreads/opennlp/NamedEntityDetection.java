@@ -19,8 +19,6 @@ public class NamedEntityDetection {
             InputStream modelInputStream = new FileInputStream("models/en-ner-" + TYPE.persons + ".bin");
             TokenNameFinderModel model = new TokenNameFinderModel(modelInputStream);
 
-            NameFinderME nameFinder = new NameFinderME(model);
-
             String[] tokens = SimpleTokenizer.INSTANCE.tokenize(content);
             Span spans[] = new NameFinderME(model).find(tokens);
 
